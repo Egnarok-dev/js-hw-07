@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+.container {
+  width: min(100% - 4rem, 20rem);
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  margin: 50px auto;
+}
+
+.container .pulse {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 100px;
+  margin-top: 200px;
+  animation: pulse 2s infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 5px 1px rgba(10, 230, 204, 0.5),
+      inset 0 0 5px 1px rgba(10, 230, 204, 0.5);
+  }
+  50% {
+    -webkit-box-shadow: 0 0 15px 3px rgb(0, 255, 225),
+      inset 0 0 15px 3px rgb(0, 255, 225);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 5px 1px rgba(10, 230, 204, 0.5),
+      inset 0 0 5px 1px rgba(10, 230, 204, 0.5);
+  }
+}
+
+.container .tasks {
+  width: auto;
+}
+
+.container .tasks .btn {
+  width: 85px;
+  height: 85px;
+  background-color: rgba(10, 230, 204, 0.5);
+  box-shadow: inset 0 0 5px 1px black;
+  border-radius: 75px;
+  margin: 45px;
+  transition: 1s all;
+}
+
+.container .tasks .btn:hover {
+  background-color: rgb(0, 255, 225);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px 5px rgba(10, 230, 204, 0.5),
+    inset 0 0 15px 5px rgba(10, 230, 204, 0.5);
+}
+
+.container .tasks .btn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin: 0 auto;
+  padding: 21px;
+  color: rgb(130, 130, 130);
+  font-size: 35px;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  transition: 1s all;
+}
+
+.container .tasks .btn a:hover {
+  color: white;
+}
+.container .tasks .active {
+  background-color: rgb(0, 255, 225);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px 5px rgba(10, 230, 204, 0.5),
+    inset 0 0 15px 5px rgba(10, 230, 204, 0.5);
+}
+
+.container .tasks .active a {
+  color: white;
+}
